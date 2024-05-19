@@ -1,0 +1,60 @@
+termux-setup-storage
+pkg update -y
+pkg upgrade -y
+pkg install "pkg_name" -y
+chmod +x "directory/archive name"
+chmod -x "directory/archive name"
+./"archive_name".sh
+bash "archive_name".sh
+df -h (To check your device disk space)
+free -h (To check your device memory usage)
+uname -a (To check kernel version)
+dpkg -l (check list of installed packages)
+busybox ifconfig (To check ip informations)
+pwd: encontra o caminho completo do diretório atual.
+    -L ou –logical imprime o conteúdo da variável de ambiente, incluindo links simbólicos.
+    -P ou –physical imprime o caminho real do diretório atual.
+cd: permite navegar até determinada pasta.
+    cd .. (com dois pontos seguidos) para subir diretório acima
+    cd ~[username] para acessar o diretório inicial de outro usuário.
+    cd– (com um hífen) para mover para os diretórios anteriores.
+ls: lista todos os arquivos e pastas dentro de um diretório.
+    ls -R vai listar todos os arquivos nos subdiretórios.
+    ls -a vai mostrar todos os arquivos ocultos.
+    ls -lh vai listar todos os tamanhos de arquivos em formatos fáceis, como MB, GB ou TB.
+cat: lista os conteúdos de um arquivo de texto na saída padrão (sdout).
+    cat > nomedoarquivo.txt cria um novo arquivo
+    cat nomedoarquivo1.txt nomedoarquivo2.txt > nomedoarquivo3.txt junta dois arquivos (1 e 2) em um novo (3).
+    cat nomedoarquivo.txt exibe o conteúdo do arquivo em ordem reversa
+cp: copia arquivos do diretório atual para uma pasta diferente.
+    Para copiar um arquivo do diretório atual para outro, digite cp seguido do nome do arquivo e do diretório de destino. Por exemplo: cp nomedoarquivo.txt /home/username/Documents
+
+    Para copiar arquivos para um diretório, digite os nomes dos arquivos seguidos do diretório de destino: cp nomedoarquivo1.txt nomedoarquivo2.txt nomedoarquivo3.txt /home/username/Documents
+
+    Para copiar o conteúdo de um arquivo para um novo arquivo no mesmo diretório, digite cp seguido do arquivo de origem e do arquivo de destino: cp nomedoarquivo1.txt nomedoarquivo2.txt
+
+    Para copiar um diretório inteiro, passe o sinalizador -R antes de digitar o diretório de origem, seguido pelo diretório de destino: cp -R /home/username/Documents /home/username/Documents_backup
+mv: pode ser usado para mover ou renomear arquivos.
+    mv nomedoarquivo.txt /home/username/Documents.
+
+    Você também pode usar o comando mv para renomear um arquivo: mv nomedoarquivo_antigo.txt nome_novo.txt
+mkdir: cria um novo diretório.
+    mkdir [opção] nome_do_diretório
+    o comando mkdir aceita muitas opções, como: 
+    -p ou –parents cria um diretório entre duas pastas existentes. Por exemplo, mkdir -p Music/2020/Songs criará o novo diretório “2020”.
+    -m define as permissões do arquivo. Por exemplo, para criar um diretório com permissões completas de leitura, gravação e execução para todos os usuários, digite mkdir -m777 nome_do_diretório.
+    -v imprime uma mensagem para cada diretório criado.
+rm: remove arquivos e diretórios.
+    remover um subdiretório vazio "diretorio" e sua pasta principal "mydir":
+    rmdir -p mydir/diretorio
+    rm nome_do_arquivo
+    rm nome_do_arquivo1 nome_do_arquivo2
+    Aqui estão algumas opções que você pode adicionar:
+
+    -i solicita a confirmação do sistema antes de excluir um arquivo.
+    -f permite que o sistema faça a remoção sem confirmação.
+    -r exclui arquivos e diretórios recursivamente
+sudo: executa um comando como superusuário.
+find: para buscar arquivos em diretórios.
+touch: O comando touch permite criar um arquivo vazio ou gerar e modificar um registro de data e hora na linha de comando do Linux.
+  Por exemplo, digite o seguinte comando para criar um arquivo HTML chamado Web no diretório Documents: touch /home/username/Documents/Web.html

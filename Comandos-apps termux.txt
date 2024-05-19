@@ -1,0 +1,17 @@
+sudo service apache2 start
+sudo service apache2 status
+nano /etc/apache2/ports.conf (change port)
+
+-----
+rofi edit
+Change Style: Edite ~/.config/rofi/launchers/type-X/launcher.sho script e edite a linha a seguir para usar o estilo de sua preferência.
+
+theme='style-1'
+Change Colors: Edite ~/.config/rofi/launchers/type-X/shared/colors.rasio arquivo e edite a linha a seguir para usar o esquema de cores de sua preferência.
+-----
+
+@import "~/.config/rofi/colors/onedark.rasi"
+As cores em type-5e são codificadas (com base nas cores da imagem) e podem ser alteradas editando o respectivo type-6arquivo .type-7style-X.rasi
+
+CREATER USER
+export USER=<Your username> ; adduser $USER ; echo "$USER ALL=(ALL:ALL) ALL" >> /etc/sudoers

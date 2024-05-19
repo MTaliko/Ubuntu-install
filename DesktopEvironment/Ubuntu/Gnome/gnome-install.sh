@@ -1,16 +1,17 @@
 #!/bin/bash
 
 #Get the necessary components
-apt-get update -y
-apt-get install sudo nano gnome-shell gnome-terminal gnome-tweaks gnome-shell-extension-ubuntu-dock nautilus gedit suru-icon-theme light-themes tightvncserver dbus-x11 adduser -y
+apt-get update && apt-get dist-upgrade -y
+apt-get install sudo nano xfce4 gnome-shell gnome-terminal gnome-tweaks gnome-shell-extension-ubuntu-dock nautilus gedit suru-icon-theme light-themes tightvncserver dbus-x11 -y
 apt-get install xfe -y
+apt-get install adduser yaru-theme-gtk yaru-theme-icon tar curl build-essential neofetch-y
 apt-get clean
 
 #Setup the necessary files
 mkdir ~/.vnc
-wget https://raw.githubusercontent.com/EXALAB/AnLinux-Resources/master/Scripts/DesktopEnvironment/Apt/Xfce4/xstartup --no-check-certificate -P ~/.vnc/
-wget https://raw.githubusercontent.com/EXALAB/AnLinux-Resources/master/Scripts/DesktopEnvironment/Apt/Xfce4/vncserver-start --no-check-certificate -P /usr/local/bin/
-wget https://raw.githubusercontent.com/EXALAB/AnLinux-Resources/master/Scripts/DesktopEnvironment/Apt/Xfce4/vncserver-stop --no-check-certificate -P /usr/local/bin/
+wget https://raw.githubusercontent.com/MTaliko/Ubuntu-install/main/Scripts/DesktopEnvironment/Apt/Xfce4/xstartup --no-check-certificate -P ~/.vnc/
+wget https://raw.githubusercontent.com/MTaliko/Ubuntu-install/main/Scripts/DesktopEnvironment/Apt/Xfce4/vncserver-start --no-check-certificate -P /usr/local/bin/
+wget https://raw.githubusercontent.com/MTaliko/Ubuntu-install/main/Scripts/DesktopEnvironment/Apt/Xfce4/vncserver-stop --no-check-certificate -P /usr/local/bin/
 
 chmod +x ~/.vnc/xstartup
 chmod +x /usr/local/bin/vncserver-start

@@ -1,0 +1,37 @@
+INSTALL UBUNTU DISTRO
+wget bash install-for-termux.sh && hash -r && wget https://raw.githubusercontent.com/MTaliko/Ubuntu-install/main/Scripts/Installer/ubuntu.sh && bash ubuntu.sh
+
+DESKTOP ENVIRONMENT
+wget https://raw.githubusercontent.com/MTaliko/Ubuntu-install/main/DesktopEnvironment/Ubuntu/Gnome/gnome-install.sh --no-check-certificate && bash gnome-install.sh
+
+UNNINSTALL UBUNTU
+wget https://raw.githubusercontent.com/MTaliko/Ubuntu-install/main/Scripts/Uninstaller/Ubuntu/UNI-ubuntu.sh && bash UNI-ubuntu.sh
+
+ADD IN xstartup.sh
+----------------------------------------------
+#!/bin/bash
+
+export XDG_CURRENT_DESKTOP="GNOME"
+service dbus start
+gnome-shell --x11
+----------------------------------------------
+
+wget https://raw.githubusercontent.com/elizeubarbosaabreu/instalar-ubuntu-smartphone-termux/main/installers.sh && chmod +x installers.sh && ./installers.sh
+
+COMMAND TO INSTALL CHROMIUN AND VS CODE
+
+apt-get install tur-repo
+apt-get install code-oss
+apt-get install chromium
+
+
+pkexec: alacritty, thunar, geany, ranger,vim
+alacritty, thunar, geany, firefox, ncmpcpp,xfce4-settings-manager
+pkexec, acpi,powertop xfce4-power-manager-settings
+light,xfce4-power-manager-settings
+mpd,mpc
+systemd,betterlockscreen
+maim, xrandr, dunst,xclip
+amixer pavucontrol
+
+xorg-xhost
